@@ -19,11 +19,13 @@
   Plugin Name:  Just A Tweet
   Plugin URI:   http://reliti.com/tag/just-a-tweet/
   Description:  Adds a function to display the last Tweet from a user
-  Version:      0.1
+  Version:      0.2
   Author:       Ryan Nutt
   Author URI:   http://reliti.com
   License: 		GPL2
  */
+
+add_shortcode('just_a_tweet', 'just_a_tweet_shortcode'); 
 
 /**
  * Output the latest tweet from the user passed
@@ -95,6 +97,16 @@ function just_a_tweet($twitterUser, $cacheAge=5, $forceRefresh=false, $echo=true
         echo $return;
     }
     return $return; 
+}
+
+/**
+ * Shortcode handler
+ * 
+ * Thanks to Chaim @ http://chaimpeck.com for the suggestion and the code
+ */
+function just_a_tweet_shortcode($atts) {
+    extract(shortcode_atts(array('twitteruser' => 'reliti'), $atts));
+    return just_a_tweet($twitteruser, 5, false, false); 
 }
 
 ?>

@@ -4,21 +4,22 @@ Donate link: http://reliti.com/donate/
 Tags: twitter, tweet
 Requires at least: 2.7
 Tested up to: 3.1
-Stable tag: 0.1
+Stable tag: 0.2
 
 Add a function to get the most recent Tweet from a feed
 
 == Description ==
 
-Adds a `just_a_tweet` function that allows you to display only the most recent
-Tweet from a Twitter feed.
+Adds a `just_a_tweet` function and short codethat allows you to display only 
+the most recent Tweet from a Twitter feed.
 
 This came about because I wanted a way to display my most recent tweet in the 
 header of my site. Looking through dozens of Twitter plugins I couldn't find
 one that just got the most recent tweet without too much extraneous HTML and
 also cached the request. This function does both.
 
-For more info, visit <a href="http://reliti.com/just-a-tweet/">Reliti.com</a>
+For more info, visit <a href="http://reliti.com/tag/just-a-tweet/">Reliti.com</a> or
+our <a href="http://twitter.com/Reliti">Twitter feed</a>.
 
 == Installation ==
 
@@ -38,16 +39,29 @@ still filled. Defaults to false
 $echo - Optional - Whether the function should also echo out the HTML built. Either
 way the HTML is returned. Defaults to true
 
+= Using the shortcode = 
+There is also a shortcode just_a_tweet that you can use inside your posts and pages.
+
+[ just_a_tweet twitteruser=yourtwitter ] will pull the most recent tweet from 
+whatever Twitter account you pass as twitteruser. 
+
 == Frequently Asked Questions ==
 None yet
 
 
 == Changelog ==
 
+= 0.2 = 
+* Added just_a_tweet short code so you can use this inside a post or page without
+having to enable PHP code.
+
 = 0.1 =
 * Initial Release
 
 == Upgrade Notice ==
+
+= 0.2 = 
+Nothing to upgrade, just added shortcode
 
 = 0.1 =
 First release, nothing to upgrade
