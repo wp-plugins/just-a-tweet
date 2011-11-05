@@ -19,10 +19,10 @@
   Plugin Name:  Just A Tweet
   Plugin URI:   http://reliti.com/tag/just-a-tweet/
   Description:  Adds a function to display the last Tweet from a user
-  Version:      0.2
+  Version:      0.3
   Author:       Ryan Nutt
   Author URI:   http://reliti.com
-  License: 		GPL2
+  License: 	GPL2
  */
 
 add_shortcode('just_a_tweet', 'just_a_tweet_shortcode'); 
@@ -49,8 +49,7 @@ function just_a_tweet($twitterUser, $cacheAge=5, $forceRefresh=false, $echo=true
         return $opts['cache'][$twitterUser]['data'];
         
     }
-    $url = 'http://twitter.com/statuses/user_timeline.json?screen_name='.$twitterUser.'&count=1';
-    
+    $url = 'http://api.twitter.com/1/statuses/user_timeline/'.$twitterUser.'.json?count=1&include_rts=true';
     if (!class_exists('WP_Http')) {
         include_once(ABSPATH . WPINC . '/class-http.php'); 
     }
@@ -61,9 +60,10 @@ function just_a_tweet($twitterUser, $cacheAge=5, $forceRefresh=false, $echo=true
     if (!isset($result['response']['code']) || $result['response']['code'] != '200') {
         $return = '<!-- Error: just_a_tweet could not retrieve from Twitter -->';
     }
-    else {
+    else {  
         $json = json_decode($result['body'], true);
-        if (!$json || !is_array($json)) {
+        
+        if (!$json || !is_array($json)) { 
             $return = '<!-- Error: just_a_tweet could not parse json -->'; 
         }
         else if (count($json) < 1) {

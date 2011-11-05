@@ -4,7 +4,7 @@ Donate link: http://reliti.com/donate/
 Tags: twitter, tweet
 Requires at least: 2.7
 Tested up to: 3.1
-Stable tag: 0.2
+Stable tag: 0.3
 
 Add a function to get the most recent Tweet from a feed
 
@@ -50,6 +50,11 @@ None yet
 
 
 == Changelog ==
+
+= 0.3 =
+* Switched to using a newer Twitter API call
+* Wasn't working if latest tweet was a retweet. Would cause an error on the first
+page view and then a JSON error after it was pulled from cache. 
 
 = 0.2 = 
 * Added just_a_tweet short code so you can use this inside a post or page without
