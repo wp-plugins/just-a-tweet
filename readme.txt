@@ -1,16 +1,15 @@
 === Just A Tweet ===
-Contributors: Aelora
-Donate link: http://reliti.com/donate/
+Contributors: RyanNutt
 Tags: twitter, tweet
 Requires at least: 2.7
 Tested up to: 3.1
-Stable tag: 0.3
+Stable tag: 0.3.1
 
 Add a function to get the most recent Tweet from a feed
 
 == Description ==
 
-Adds a `just_a_tweet` function and short codethat allows you to display only 
+Adds a `just_a_tweet` function and short code that allows you to display only 
 the most recent Tweet from a Twitter feed.
 
 This came about because I wanted a way to display my most recent tweet in the 
@@ -18,8 +17,8 @@ header of my site. Looking through dozens of Twitter plugins I couldn't find
 one that just got the most recent tweet without too much extraneous HTML and
 also cached the request. This function does both.
 
-For more info, visit <a href="http://reliti.com/tag/just-a-tweet/">Reliti.com</a> or
-our <a href="http://twitter.com/Reliti">Twitter feed</a>.
+For more info, visit <a href="http://www.nutt.net/tag/just-a-tweet/">Nutt.net</a> or
+my <a href="http://twitter.com/RyanNutt">Twitter feed</a>.
 
 == Installation ==
 
@@ -43,13 +42,16 @@ way the HTML is returned. Defaults to true
 There is also a shortcode just_a_tweet that you can use inside your posts and pages.
 
 [ just_a_tweet twitteruser=yourtwitter ] will pull the most recent tweet from 
-whatever Twitter account you pass as twitteruser. 
+whatever Twitter account you pass as `yourtwitter`. 
 
 == Frequently Asked Questions ==
 None yet
 
 
 == Changelog ==
+
+= 0.3.1 =
+* No real change, just updating to switch to a new site
 
 = 0.3 =
 * Switched to using a newer Twitter API call

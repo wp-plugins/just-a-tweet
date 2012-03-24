@@ -17,11 +17,11 @@
 
 /*
   Plugin Name:  Just A Tweet
-  Plugin URI:   http://reliti.com/tag/just-a-tweet/
+  Plugin URI:   http://www.nutt.net/tag/just-a-tweet/
   Description:  Adds a function to display the last Tweet from a user
-  Version:      0.3
+  Version:      0.3.1
   Author:       Ryan Nutt
-  Author URI:   http://reliti.com
+  Author URI:   http://www.nutt.net
   License: 	GPL2
  */
 
